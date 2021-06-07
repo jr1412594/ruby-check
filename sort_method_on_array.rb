@@ -7,5 +7,5 @@ bool = [2, 3, 5, -1, "hello"]
 
 
 p bool.sort
-# p numbers.sort.reverse
-# p words.sort.reverse
+p numbers.sort.reverse
+p words.sort.reverse
