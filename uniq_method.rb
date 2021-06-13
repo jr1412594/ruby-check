@@ -36,6 +36,6 @@ def another_cstom_uniq(array)
 end
 
 p numbers.uniq
-p custom_uniq(numbers)
-p better_custom_uniq(numbers)
-p another_cstom_uniq(numbers)
+p custom_uniq(numbers) == numbers.uniq
+p better_custom_uniq(numbers) == numbers.uniq
+p another_cstom_uniq(numbers) == numbers.uniq
