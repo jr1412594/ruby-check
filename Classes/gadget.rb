@@ -2,14 +2,18 @@ class Gadget
 
 end
 
-# puts Gadget.superclass
+shiny = Gadget.new
+flashy = Gadget.new
 
-phone = Gadget.new
-laptop = Gadget.new
-microwave = Gadget.new
+# p shiny.object_id
+# p flashy.object_id
 
-puts phone.respond_to?(:class)
-puts phone.respond_to?(:method)
-puts phone.respond_to?(:is_a?)
-puts phone.respond_to?(:respond_to?)
-puts phone.respond_to?(:length)
+#these are two completely different objects.
+
+glossy = shiny
+
+#glossy now points to the same object shiny does. 
+#glossy is not a 3rd object. 
+
+
+
