@@ -1,19 +1,15 @@
 class Gadget
 
+    def initialize
+        @username = "User #{rand(1..100)}"
+        @password = "topsecret"
+        @production_number = "#{("a".."z").to_a.sample}-#{rand(1..999)}"
+    end
+
 end
 
-shiny = Gadget.new
-flashy = Gadget.new
-
-# p shiny.object_id
-# p flashy.object_id
-
-#these are two completely different objects.
-
-glossy = shiny
-
-#glossy now points to the same object shiny does. 
-#glossy is not a 3rd object. 
-
-
+phone = Gadget.new
+p phone.instance_variables
+laptop = Gadget.new
+p laptop.instance_variables
 
