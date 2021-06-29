@@ -1,3 +1,5 @@
+require 'pry'
+
 class Gadget
 
     def initialize
@@ -6,10 +8,16 @@ class Gadget
         @production_number = "#{("a".."z").to_a.sample}-#{rand(1..999)}"
     end
 
+    def to_s
+        "Gadget #{@production_number} has the username #{@username}"
+    end
+
 end
 
 phone = Gadget.new
-p phone.instance_variables
-laptop = Gadget.new
-p laptop.instance_variables
+
+puts phone.respond_to?(:to_s)
+puts phone.to_s
+
+binding.pry
 
