@@ -5,13 +5,19 @@ module Purchaseable
 end
 
 class Bookstore
-    include Purchaseable
+    # include Purchaseable
+    prepend Purchaseable
 
     def purchase(item)
         "You bought a copy of #{item} at the bookstore!, im in the class bookstore"
     end
 end
 
+bn = Bookstore.new
+p bn.purchase("1984")
+
+
+######################################################################
 class Supermarket
     include Purchaseable
 
@@ -26,10 +32,5 @@ class CornerMart < Supermarket
     end
 end
 
-p Bookstore.ancestors
 
-# shoprite = Supermarket.new
-# p shoprite.purchase("1984")
-p CornerMart.ancestors
-quickemart = CornerMart.new
-p quickemart.purchase("slurpee")
+#prepend keyword places the module infront of the class
