@@ -1,7 +1,8 @@
 require 'pry'
+require_relative 'app_store'
 
 class Gadget
-
+    
     # attr_writer :password
     attr_reader :production_number, :apps#, :username  // if you wanted multiple args
     attr_accessor :username
@@ -16,6 +17,16 @@ class Gadget
     def to_s
         "Gadget #{production_number} has the username #{username}. It is made from the #{self.class} class and it has the ID #{object_id}."
         # binding.pry
+    end
+
+    def install_app(name)
+        app = AppStore.find_app(name)
+        @apps << app unless @apps.include?(app)
+    end
+
+    def delete_app(name)
+        app = apps.find { |installed_app| installed_app.name == name }
+        apps.delete(app) unless app.nil?
     end
 
     def reset(username, password)
@@ -47,21 +58,17 @@ class Gadget
 
 end
 
-phone = Gadget.new("Rubyluver89", "programming123")
-p phone.to_s
-# p phone.password
+g = Gadget.new("Junior", "Password1")
 
-# phone.password = 123
-# p phone.password
+p g.apps
 
-# phone.password = "test"
-# p phone.password
+g.install_app(:Twitter)
+g.install_app(:Chat)
+g.install_app(:Twitter)
+g.delete_app(:Chat)
 
-# phone.password = "computer"
-# p phone.password
+p g.apps
 
-# phone.password = "computer123"
-# p phone.password
 # binding.pry
 
 
