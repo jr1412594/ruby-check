@@ -13,7 +13,7 @@ class Gadget
     end
 
     def to_s
-        "Gadget #{@production_number} has the username #{@username}. It is made from the #{self.class} class and it has the ID #{self.object_id}."
+        "Gadget #{production_number} has the username #{username}. It is made from the #{self.class} class and it has the ID #{object_id}."
         # binding.pry
     end
 
@@ -39,19 +39,20 @@ class Gadget
 end
 
 phone = Gadget.new("Rubyluver89", "programming123")
-p phone.password
+p phone.to_s
+# p phone.password
 
-phone.password = 123
-p phone.password
+# phone.password = 123
+# p phone.password
 
-phone.password = "test"
-p phone.password
+# phone.password = "test"
+# p phone.password
 
-phone.password = "computer"
-p phone.password
+# phone.password = "computer"
+# p phone.password
 
-phone.password = "computer123"
-p phone.password
+# phone.password = "computer123"
+# p phone.password
 # binding.pry
 
 
