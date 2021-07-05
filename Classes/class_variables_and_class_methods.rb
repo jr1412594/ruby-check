@@ -33,5 +33,4 @@ syntax
 
     Be careful! In an instance method definition, self refers to the object
 
-    
 =end
