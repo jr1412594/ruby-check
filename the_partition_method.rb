@@ -32,6 +32,13 @@ puts "The answer is..."
 p positive_count_negative_sum(numbers)
 
 
+# arr1 = [2960, -1870, -6517, 6077, 6628]
+# arr2 = [1826, -9465, 2429, -2790, 7388]
+
+# p arr1.concat(arr2).sum
+# p arr1.sum + arr2.sum
+
+
 
 
 
